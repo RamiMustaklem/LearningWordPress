@@ -66,3 +66,6 @@ add_action( 'admin_init', 'custom_settings_page_setup' );
 function setting_github() { ?>
     <input type="text" name="github" id="github" value="<?php echo get_option( 'github' ); ?>"/>
 <?php }
+
+// Support Featured Images
+add_theme_support( 'post-thumbnails' );
