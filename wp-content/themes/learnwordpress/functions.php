@@ -74,19 +74,20 @@ add_theme_support( 'post-thumbnails' );
 function create_my_custom_post() {
 	register_post_type( 'my-custom-post',
 		array(
-			'labels' => array(
-				'name' => __( 'My Custom Post' ),
+			'labels'      => array(
+				'name'          => __( 'My Custom Post' ),
 				'singular_name' => __( 'My Custom Post' ),
 			),
-			'public' => true,
+			'public'      => true,
 			'has_archive' => true,
-			'supports' => array(
+			'supports'    => array(
 				'title',
 				'editor',
 				'thumbnail',
 				'custom-fields'
 			)
-		));
+		)
+	);
 }
 
 add_action( 'init', 'create_my_custom_post' );
